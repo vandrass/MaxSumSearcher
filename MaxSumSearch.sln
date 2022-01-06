@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSumSearch", "MaxSumSearch\MaxSumSearch.csproj", "{89566E65-BE45-43CE-9561-7064EBD07BEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxSumSearch.UI", "MaxSumSearch\MaxSumSearch.UI.csproj", "{89566E65-BE45-43CE-9561-7064EBD07BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSumSearch.Application", "MaxSumSearch.Application\MaxSumSearch.Application.csproj", "{5B38EB69-E15A-44B6-BEF4-E2BFAB1F1996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSumSearch.UnitTests", "MaxSumSearch.UnitTests\MaxSumSearch.UnitTests.csproj", "{32071494-B6FF-4B87-9A4B-767361679D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{89566E65-BE45-43CE-9561-7064EBD07BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89566E65-BE45-43CE-9561-7064EBD07BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89566E65-BE45-43CE-9561-7064EBD07BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B38EB69-E15A-44B6-BEF4-E2BFAB1F1996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B38EB69-E15A-44B6-BEF4-E2BFAB1F1996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B38EB69-E15A-44B6-BEF4-E2BFAB1F1996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B38EB69-E15A-44B6-BEF4-E2BFAB1F1996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32071494-B6FF-4B87-9A4B-767361679D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32071494-B6FF-4B87-9A4B-767361679D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32071494-B6FF-4B87-9A4B-767361679D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32071494-B6FF-4B87-9A4B-767361679D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

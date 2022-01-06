@@ -1,12 +1,15 @@
-﻿using System;
-
-namespace MaxSumSearch
+﻿namespace MaxSumSearch.UI
 {
-    class Program
+    /// <summary>
+    /// Start program class with console User Interface.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Main UI Method.
+        /// </summary>
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
