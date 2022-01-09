@@ -12,7 +12,15 @@
         /// <param name="content">object with file content.</param>
         public void PrintMaxElementSumLine(FileContent content)
         {
-            throw new System.NotImplementedException();
+            for (var i = 0; i < content.GetFileContent.GetUpperBound(0) + 1; i++)
+            {
+                foreach (var cont in content.GetFileContent[i])
+                {
+                    System.Console.Write(cont + "\t");
+                }
+
+                System.Console.WriteLine();
+            }
         }
     }
 }
