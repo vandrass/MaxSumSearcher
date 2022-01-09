@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using MaxSumSearch.Application;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MaxSumSearch.UI
 {
@@ -22,6 +24,10 @@ namespace MaxSumSearch.UI
                 Console.WriteLine(File.Exists(path) ? "File exists" : "File doesn't exist!");
             }
             while (!File.Exists(path));
+
+            var myFile = new FileReader(path);
+
+            var serviceCollection = new ServiceCollection();
 
             Console.ReadLine();
         }
