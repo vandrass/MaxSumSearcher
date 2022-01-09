@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MaxSumSearch.UI": {
+      "commandName": "Project",
+      "commandLineArgs": "dgbgh"
+    }
+  }
+}
