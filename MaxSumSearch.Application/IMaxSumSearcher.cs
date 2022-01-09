@@ -3,16 +3,13 @@
     /// <summary>
     /// Search and print a Line with max sum of elements.
     /// </summary>
-    public class MaxSumSearcher : IMaxSumSearcher
+    public interface IMaxSumSearcher
     {
         /// <summary>
         /// Print number of line, with maximal sum of elements,
         /// and "broken" lines (with non numeric symbols) aside.
         /// </summary>
         /// <param name="content">object with file content.</param>
-        public void PrintMaxElementSumLine(FileContent content)
-        {
-            throw new System.NotImplementedException();
-        }
+        public void PrintMaxElementSumLine(FileContent content);
     }
 }

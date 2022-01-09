@@ -25,9 +25,14 @@ namespace MaxSumSearch.UI
             }
             while (!File.Exists(path));
 
-            var myFile = new FileReader(path);
+            var content = new FileContent(path);
 
             var serviceCollection = new ServiceCollection();
+            serviceCollection.AddScoped<IMaxSumSearcher, MaxSumSearcher>();
+            var provider = serviceCollection.BuildServiceProvider();
+            var service = provider.GetRequiredService<IMaxSumSearcher>();
+
+            service.PrintMaxElementSumLine(content);
 
             Console.ReadLine();
         }
