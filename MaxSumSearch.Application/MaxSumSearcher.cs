@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace MaxSumSearch.Application
 {
@@ -7,9 +8,10 @@ namespace MaxSumSearch.Application
     /// </summary>
     public class MaxSumSearcher : IMaxSumSearcher
     {
-        private long _maxSumOfLine;
+        private double _maxSumOfLine;
         private int _indexOfMaxSumLine;
         private int[] _brokenLinesIndexes;
+        private CultureInfo provider = new CultureInfo("en-Us");
 
         /// <summary>
         /// Print number of line, with maximal sum of elements,
@@ -27,9 +29,11 @@ namespace MaxSumSearch.Application
 
             for (var i = 0; i < linesNumber; i++)
             {
+                parsed = true;
+
                 for (var j = 0; j < content.GetFileContent[i].Length && parsed == true; j++)
                 {
-                    if (parsed = long.TryParse(content.GetFileContent[i][j], out long number))
+                    if (parsed = double.TryParse(content.GetFileContent[i][j], NumberStyles.AllowDecimalPoint, provider, out double number))
                     {
 
                     }
