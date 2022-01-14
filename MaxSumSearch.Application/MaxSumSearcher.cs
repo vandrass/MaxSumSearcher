@@ -8,17 +8,17 @@ namespace MaxSumSearch.Application
     /// </summary>
     public class MaxSumSearcher : IMaxSumSearcher
     {
+        private readonly CultureInfo provider = new CultureInfo("en-Us");
         private double _maxSumOfLine;
         private int _indexOfMaxSumLine;
         private int[] _brokenLinesIndexes;
-        private CultureInfo provider = new CultureInfo("en-Us");
 
         /// <summary>
         /// Print number of line, with maximal sum of elements,
         /// and "broken" lines (with non numeric symbols) aside.
         /// </summary>
         /// <param name="content">object with file content.</param>
-        public void PrintMaxElementSumLine(FileContent content)
+        public void PrintMaxElementSumLineAndBrokenLines(FileContent content)
         {
             int linesNumber = content.GetFileContent.GetUpperBound(0) + 1;
             int brokenLinesCounter = 0;
@@ -41,6 +41,7 @@ namespace MaxSumSearch.Application
                     {
                         _brokenLinesIndexes[brokenLinesCounter] = i + 1;
                         brokenLinesCounter++;
+                        tmpSum = 0;
                     }
                 }
 
@@ -51,23 +52,50 @@ namespace MaxSumSearch.Application
                 }
             }
 
-            PrintMaxLineAndBrokenLines();
+            Array.Resize(ref _brokenLinesIndexes, brokenLinesCounter);
+
+            PrintMaxAndBrokenLines();
         }
 
-        private void PrintMaxLineAndBrokenLines()
+        /// <summary>
+        /// Method for unit test, check if method PrintMaxElementSumLine() print right Max sum numbers line.
+        /// </summary>
+        /// <param name="content">File content.</param>
+        /// <returns>number of line with max sum of numbers.</returns>
+        public int GetMaxSumLineTest(FileContent content)
+        {
+            PrintMaxElementSumLineAndBrokenLines(content);
+            return _indexOfMaxSumLine;
+        }
+
+        /// <summary>
+        /// Method for unit test, check if method PrintMaxElementSumLine() print right number of broken lines.
+        /// </summary>
+        /// <param name="content">File content.</param>
+        /// <returns>array with numbers of broken lines(include non numeric symbols).</returns>
+        public int[] GetBrokenLinesTest(FileContent content)
+        {
+            PrintMaxElementSumLineAndBrokenLines(content);
+            return _brokenLinesIndexes;
+        }
+
+        private void PrintMaxAndBrokenLines()
         {
             Console.WriteLine("Line with maximal Sum of numbers is: " + _indexOfMaxSumLine);
 
             Console.Write("Broken Lines Numbers: ");
 
+            if (_brokenLinesIndexes.Length == 0)
+            {
+                Array.Resize(ref _brokenLinesIndexes, 1);
+                _brokenLinesIndexes[0] = 0;
+            }
+
             for (int i = 0; i < _brokenLinesIndexes.Length; i++)
             {
-                if (_brokenLinesIndexes[i] != 0)
-                {
-                    Console.Write(_brokenLinesIndexes[i]);
-                }
+                Console.Write(_brokenLinesIndexes[i]);
 
-                if ( i + 1 != _brokenLinesIndexes.Length && _brokenLinesIndexes[i + 1] != 0)
+                if (i + 1 != _brokenLinesIndexes.Length)
                 {
                     Console.Write(", ");
                 }

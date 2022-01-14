@@ -1,8 +1,7 @@
 {
   "profiles": {
     "MaxSumSearch.UI": {
-      "commandName": "Project",
-      "commandLineArgs": "\"E:\\Study\\Ivan\\C#\\Fixminded Projects\\MaxSumSearch\\test.txt\""
+      "commandName": "Project"
     }
   }
 }

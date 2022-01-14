@@ -20,7 +20,7 @@ namespace MaxSumSearch.UI
 
             do
             {
-                if (File.Exists(args[0]))
+                if (args.Length > 0 && File.Exists(args[0]))
                 {
                     path = args[0];
                 }
@@ -40,7 +40,7 @@ namespace MaxSumSearch.UI
             var provider = serviceCollection.BuildServiceProvider();
             var service = provider.GetRequiredService<IMaxSumSearcher>();
 
-            service.PrintMaxElementSumLine(content);
+            service.PrintMaxElementSumLineAndBrokenLines(content);
 
             Console.ReadLine();
         }
