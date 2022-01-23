@@ -24,6 +24,7 @@ namespace MaxSumSearch.Application
             int brokenLinesCounter = 0;
             double tmpSum;
             bool parsed;
+            var numbStyle = NumberStyles.AllowDecimalPoint;
             _brokenLinesIndexes = new int[linesNumber];
 
             for (var i = 0; i < linesNumber; i++)
@@ -33,7 +34,7 @@ namespace MaxSumSearch.Application
 
                 for (var j = 0; j < content.GetFileContent[i].Length && parsed; j++)
                 {
-                    if (parsed = double.TryParse(content.GetFileContent[i][j], NumberStyles.AllowDecimalPoint, _provider, out double number))
+                    if (double.TryParse(content.GetFileContent[i][j], numbStyle, _provider, out double number))
                     {
                         tmpSum += number;
                     }
@@ -42,6 +43,7 @@ namespace MaxSumSearch.Application
                         _brokenLinesIndexes[brokenLinesCounter] = i + 1;
                         brokenLinesCounter++;
                         tmpSum = 0;
+                        parsed = false;
                     }
                 }
 
