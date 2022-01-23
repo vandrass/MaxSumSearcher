@@ -24,7 +24,7 @@ namespace MaxSumSearch.UnitTests
         public void GetMaxSumLineTest_FileWithSecondMaxLine_LineTwo()
         {
             //Arrange
-            var fileContent = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\AllLinesTest.txt");
+            var fileContent = new FileContent(@"..\..\..\testFiles\AllLinesTest.txt");
             int expected = 2;
 
             //Act
@@ -38,7 +38,7 @@ namespace MaxSumSearch.UnitTests
         public void GetBrokenLinesTest_FileWithThirdAndFourthBrokenLines_LinesThreeAndFour()
         {
             //Arrange
-            var fileConten = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\AllLinesTest.txt");
+            var fileConten = new FileContent(@"..\..\..\testFiles\AllLinesTest.txt");
             int[] expected = new[] { 3, 4 };
 
             //Act
@@ -52,7 +52,7 @@ namespace MaxSumSearch.UnitTests
         public void GetMaxSumLineTest_FileWithThirdMaxLine_LineThree()
         {
             //Arrange
-            var fileContent = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\CorrectLinesOnlyTest.txt");
+            var fileContent = new FileContent(@"..\..\..\testFiles\CorrectLinesOnlyTest.txt");
             int expected = 3;
 
             //Act
@@ -66,7 +66,7 @@ namespace MaxSumSearch.UnitTests
         public void GetBrokenLinesTest_FileWithoutBrokenLines_Zero()
         {
             //Arrange
-            var fileConten = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\CorrectLinesOnlyTest.txt");
+            var fileConten = new FileContent(@"..\..\..\testFiles\CorrectLinesOnlyTest.txt");
             int[] expected = new[] { 0 };
 
             //Act
@@ -80,7 +80,7 @@ namespace MaxSumSearch.UnitTests
         public void GetMaxSumLineTest_FileWithBrokenLinesOnly_Zero()
         {
             //Arrange
-            var fileContent = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\BrokenLinesOnlyTest.txt");
+            var fileContent = new FileContent(@"..\..\..\testFiles\BrokenLinesOnlyTest.txt");
             int expected = 0;
 
             //Act
@@ -94,7 +94,7 @@ namespace MaxSumSearch.UnitTests
         public void GetBrokenLinesTest_FileWithBrokenLinesOnly_AllLinesFromOneUntilSix()
         {
             //Arrange
-            var fileConten = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\BrokenLinesOnlyTest.txt");
+            var fileConten = new FileContent(@"..\..\..\testFiles\BrokenLinesOnlyTest.txt");
             int[] expected = new[] { 1, 2, 3, 4, 5, 6 };
 
             //Act
@@ -108,7 +108,7 @@ namespace MaxSumSearch.UnitTests
         public void GetMaxSumLineTest_EmptyFileForCorrectLines_Zero()
         {
             //Arrange
-            var fileContent = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\EmptyOnlyTest.txt");
+            var fileContent = new FileContent(@"..\..\..\testFiles\EmptyOnlyTest.txt");
             int expected = 0;
 
             //Act
@@ -122,7 +122,7 @@ namespace MaxSumSearch.UnitTests
         public void GetBrokenLinesTest_EmptyFileForBrokenLines_Zero()
         {
             //Arrange
-            var fileConten = new FileContent(@"E:\Study\Ivan\C#\Fixminded Projects\MaxSumSearch\MaxSumSearch.UnitTests\testFiles\EmptyOnlyTest.txt");
+            var fileConten = new FileContent(@"..\..\..\testFiles\EmptyOnlyTest.txt");
             int[] expected = new[] { 0 };
 
             //Act

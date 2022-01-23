@@ -8,7 +8,7 @@ namespace MaxSumSearch.Application
     /// </summary>
     public class MaxSumSearcher : IMaxSumSearcher
     {
-        private readonly CultureInfo provider = new CultureInfo("en-Us");
+        private readonly CultureInfo _provider = new CultureInfo("en-Us");
         private double _maxSumOfLine;
         private int _indexOfMaxSumLine;
         private int[] _brokenLinesIndexes;
@@ -31,9 +31,9 @@ namespace MaxSumSearch.Application
                 parsed = true;
                 tmpSum = 0;
 
-                for (var j = 0; j < content.GetFileContent[i].Length && parsed == true; j++)
+                for (var j = 0; j < content.GetFileContent[i].Length && parsed; j++)
                 {
-                    if (parsed = double.TryParse(content.GetFileContent[i][j], NumberStyles.AllowDecimalPoint, provider, out double number))
+                    if (parsed = double.TryParse(content.GetFileContent[i][j], NumberStyles.AllowDecimalPoint, _provider, out double number))
                     {
                         tmpSum += number;
                     }
